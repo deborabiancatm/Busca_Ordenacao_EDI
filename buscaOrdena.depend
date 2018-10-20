@@ -1,5 +1,21 @@
 # depslib dependency file v1.0
-1540067739 source:c:\bianca\ufrr\5º semestre\estrutura de dados i\buscaordena\main.c
+1540077056 source:c:\bianca\ufrr\5º semestre\estrutura de dados i\buscaordena\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<unistd.h>
+	"files.c"
+	"ordenacao.c"
+
+1540070762 c:\bianca\ufrr\5º semestre\estrutura de dados i\buscaordena\files.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<unistd.h>
+
+1540071597 c:\bianca\ufrr\5º semestre\estrutura de dados i\buscaordena\ordenacao.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
