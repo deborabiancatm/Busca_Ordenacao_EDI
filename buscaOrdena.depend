@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1540067739 source:c:\bianca\ufrr\5º semestre\estrutura de dados i\buscaordena\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<unistd.h>
+
