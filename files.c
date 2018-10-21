@@ -151,14 +151,14 @@ void arquivoRand (int* vet, int* vet1, int* vet2, int* vet3){
     int i = 0, num;
     FILE *arquivo;
 
-    arquivo = fopen("100 Numeros Ordenados", "rt");
+    arquivo = fopen("100 Numeros Ordenados.txt", "rt");
     while((fscanf(arquivo,"%d ",&num)) != EOF){
         vet[i]= num;
         i++;
     }
     fclose(arquivo);
 
-    arquivo = fopen("1000 Numeros Ordenados", "rt");
+    arquivo = fopen("1000 Numeros Ordenados.txt", "rt");
     i = 0;
     while((fscanf(arquivo,"%d ",&num)) != EOF){
         vet1[i]= num;
@@ -166,7 +166,7 @@ void arquivoRand (int* vet, int* vet1, int* vet2, int* vet3){
     }
     fclose(arquivo);
 
-    arquivo = fopen("10000 Numeros Ordenados", "rt");
+    arquivo = fopen("10000 Numeros Ordenados.txt", "rt");
     i = 0;
     while((fscanf(arquivo,"%d ",&num)) != EOF){
         vet2[i]= num;
@@ -174,7 +174,7 @@ void arquivoRand (int* vet, int* vet1, int* vet2, int* vet3){
     }
     fclose(arquivo);
 
-    arquivo = fopen("100000 Numeros Ordenados", "rt");
+    arquivo = fopen("100000 Numeros Ordenados.txt", "rt");
     i = 0;
     while(!feof(arquivo)){
         vet3[i]= num;
@@ -182,6 +182,5 @@ void arquivoRand (int* vet, int* vet1, int* vet2, int* vet3){
         i++;
     }
     fclose(arquivo);
-
 }
 

@@ -14,7 +14,7 @@ int swap(int *menor, int *i){ //Funcao que troca valores de endereco
 //FUNCOES DE ORDENACAO
 void selectionSort(int *vet, int size){
     clock_t start, end;
-    int i, j, min, aux = 0;
+    int i, j, min;
 
     start = clock(); //Comeca a contar o tempo de execucao
     for (i = 0; i < size-1; i++){
@@ -195,5 +195,24 @@ void buscaSequencial(int *vet, int size, int n){
 }
 
 void buscaBinaria(int *vet, int size, int n){
+    int r = binary(vet, 0, size-1, n);
+    if (r != -1)
+        printf("\n%d FOI ENCONTRADO COM INDEX %d NO ARQUIVO COM %d VALORES\n", n, r, size);
+    else
+        printf("\n%d NAO ENCONTRADO NO ARQUIVO COM %d VALORES\n", n, size);
 
+}
+
+int binary(int *vet, int l, int r, int num){
+    if (r >= l){
+        int mid = l + (r-l)/2;
+
+        if (vet[mid] == num)
+            return mid;
+
+        if (vet[mid] > num)
+            return binary(vet, l, mid-1, num);
+        return binary(vet, mid+1, r, num);
+    }
+    return -1;
 }

@@ -157,6 +157,16 @@ int main()
                     buscaSequencial(v3, 100000, n);
                     break;
                 case 2:
+                    system("CLS");
+                    arquivoRand(v0, v1, v2, v3);
+                    printf("================BUSCA BINARIA=====================\n\n");
+                    printf("Digite o valor de 0-999 que deseja buscar: ");
+                    int m;
+                    scanf("%d", &m);
+                    buscaBinaria(v0, 100, m);
+                    buscaBinaria(v1, 1000, m);
+                    buscaBinaria(v2, 10000, m);
+                    buscaBinaria(v3, 100000, m);
                     break;
                     default:
                         printf("Opcao nao disponivel");
