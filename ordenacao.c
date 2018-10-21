@@ -128,3 +128,65 @@ int quickSort(int *vet, int size){
 
     return 0;
 }
+
+ void merge(int *vet, int begin, int middle, int end){
+    int i = begin, j = middle+1, k = 0, size = end-begin+1;
+    int *aux = (int*)malloc(size* sizeof(int));
+
+    while (i <= middle && j <= end){
+        if (vet[i] < vet[j]){
+            aux[k] = vet[i];
+            i++;
+        } else {
+            aux[k] = vet[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i <= middle){
+        aux[k] = vet[i];
+        k++;
+        i++;
+    }
+
+    while (j <= end){
+        aux[k] = vet[j];
+        k++;
+        j++;
+    }
+
+    for (k = begin; k <= end; k++){
+        vet[k] = aux[k-begin];
+    }
+
+    free(aux);
+}
+
+void mergeAgain(int *vet, int i, int j){
+    if (i < j){
+        int middle = (i+j)/2;
+        mergeAgain(vet, i, middle);
+        mergeAgain(vet, middle+1, j);
+        merge(vet, i, middle, j);
+    }
+}
+
+
+int mergeSort(int *vet, int size){
+
+    clock_t start, end;
+    start = clock(); //Comeca a contar o tempo de execucao
+
+    mergeAgain(vet, 0, size-1);
+
+
+    end = clock(); // finaliza a contagem do tempo
+    float total_time = ((double) (end - start)) / CLK_TCK; //realiza o calculo de temp
+
+    printf("ALGORITMO: MERGE SORT\n");
+    printf("TAMANHO: %d numeros\n", size);
+    printf("TEMPO: %f segundos\n\n", total_time);
+
+    return 0;
+}

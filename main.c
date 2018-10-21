@@ -118,6 +118,17 @@ int main()
                     break;
                 case 6:
                     printf("================MERGE SORT===================\n\n");
+                    mergeSort(v0, 100);
+                    arq100(v0);
+
+                    mergeSort(v1, 1000);
+                    arq1000(v1);
+
+                    mergeSort(v2, 10000);
+                    arq10000(v2);
+
+                    mergeSort(v3, 100000);
+                    arq100000(v3);
                     break;
                 default:
                     printf("Opcao nao disponivel");
