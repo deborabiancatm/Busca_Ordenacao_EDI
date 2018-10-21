@@ -63,3 +63,27 @@ int insertSort(int *vet, int size){
 
     return 0;
 }
+
+int bubbleSort(int *vet, int size){
+    clock_t start, end;
+    int i, j;
+
+    start = clock(); //Comeca a contar o tempo de execucao
+
+    for (i = 0; i < size-1; i++){
+        for (j = 0; j < (size-i-1); j++){ //percorre o vetor procurando o menor valor
+            if (vet[j] > vet[j+1]){ //se encontrar um valor menor
+                swap(&vet[j+1], &vet[j]); //troca os valores
+            }
+        }
+    }
+
+    end = clock(); // finaliza a contagem do tempo
+    float total_time = ((double) (end - start)) / CLK_TCK; //realiza o calculo de temp
+
+    printf("ALGORITMO: BUBBLE SORT\n");
+    printf("TAMANHO: %d numeros\n", size);
+    printf("TEMPO: %f segundos\n\n", total_time);
+
+    return 0;
+}
