@@ -4,17 +4,18 @@
 #include <time.h>
 #include <unistd.h>
 
-int swap(int *menor, int *i){ //Funcao que troca valores de endereco
+//Funcao swap troca valores de endereco
+int swap(int *j, int *i){
     int aux = *i;
-    *i = *menor;
-    *menor = aux;
+    *i = *j;
+    *j = aux;
     return 0;
 }
 
-//FUNCOES DE ORDENACAO
+//Funcao SelectionSort
 void selectionSort(int *vet, int size){
     clock_t start, end;
-    int i, j, min;
+    int i, j, min, comp = 0, move = 0;
 
     start = clock(); //Comeca a contar o tempo de execucao
     for (i = 0; i < size-1; i++){
@@ -22,10 +23,12 @@ void selectionSort(int *vet, int size){
         for (j = i+1; j < size; j++){ //percorre o vetor procurando o menor valor
             if (vet[min] > vet[j]){ //se encontrar um valor menor
                 min = j; //a posicao de menor valor e redefinida
+                comp++;
             }
         }
         if(min != i)
             swap(&vet[min], &vet[i]); //troca os valores
+            move++;
     }
 
     end = clock(); // finaliza a contagem do tempo
