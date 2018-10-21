@@ -71,6 +71,17 @@ int main()
                     break;
                 case 2:
                     printf("================INSERTION SORT===================\n\n");
+                    insertSort(v0, 100);
+                    arq100(v0);
+
+                    insertSort(v1, 1000);
+                    arq1000(v1);
+
+                    insertSort(v2, 10000);
+                    arq10000(v2);
+
+                    insertSort(v3, 100000);
+                    arq100000(v3);
                     break;
                 case 3:
                     printf("================BUBBLE SORT===================\n\n");
