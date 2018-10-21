@@ -13,7 +13,7 @@ int criaCem(){ //Essa funcao cria o arquivo com 100 numeros aleatorios
         srand(time(0));
         int n, i;
         for(i = 0; i < 100; i++) {
-            n = rand()%1000; //Gera numero aleatorio
+            n = rand()%100; //Gera numero aleatorio
             fprintf(arq,"%d ", n); //Imprime numero aleatorio no arquivo
         }
          fclose(arq); //Fecha o arquivo
@@ -30,7 +30,7 @@ int criaMil(){ //Essa funcao cria o arquivo com 1000 numeros aleatorios
         srand(time(0));
         int n, i;
         for(i = 0; i < 1000; i++) {
-            n = rand()%1000; //Gera numero aleatorio
+            n = rand()%100; //Gera numero aleatorio
             fprintf(arq,"%d ", n); //Imprime numero aleatorio no arquivo
         }
          fclose(arq); //Fecha o arquivo
@@ -47,7 +47,7 @@ int criaDezmil(){ //Essa funcao cria o arquivo com 10000 numeros aleatorios
         srand(time(0));
         int n, i;
         for(i = 0; i < 10000; i++) {
-            n = rand()%1000; //Gera numero aleatorio
+            n = rand()%100; //Gera numero aleatorio
             fprintf(arq,"%d ", n); //Imprime numero aleatorio no arquivo
         }
          fclose(arq); //Fecha o arquivo
@@ -63,7 +63,7 @@ int criaCemmil(){ //Essa funcao cria o arquivo com 10000 numeros aleatorios
         srand(time(0));
         int n, i;
         for(i = 0; i < 100000; i++) {
-            n = rand()%1000; //Gera numero aleatorio
+            n = rand()%100; //Gera numero aleatorio
             fprintf(arq,"%d ", n); //Imprime numero aleatorio no arquivo
         }
          fclose(arq); //Fecha o arquivo
