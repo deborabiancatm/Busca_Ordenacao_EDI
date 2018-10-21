@@ -46,7 +46,8 @@ int main()
             printf("[2]INSERTION SORT\n");
             printf("[3]BUBBLE SORT\n");
             printf("[4]RADIX SORT\n");
-            printf("[5]MERGE SORT\n\n");
+            printf("[5]QUICK SORT\n");
+            printf("[6]MERGE SORT\n\n");
             printf("Escolha o tipo de ordenacao: ");
             int tipo;
             scanf("%d", &tipo);
@@ -85,12 +86,37 @@ int main()
                     break;
                 case 3:
                     printf("================BUBBLE SORT===================\n\n");
+                    bubbleSort(v0, 100);
+                    arq100(v0);
+
+                    bubbleSort(v1, 1000);
+                    arq1000(v1);
+
+                    bubbleSort(v2, 10000);
+                    arq10000(v2);
+
+                    bubbleSort(v3, 100000);
+                    arq100000(v3);
                     break;
                 case 4:
                     printf("================RADIX SORT===================\n\n");
 
                     break;
                 case 5:
+                    printf("================QUICK SORT===================\n\n");
+                    quickSort(v0, 100);
+                    arq100(v0);
+
+                    quickSort(v1, 1000);
+                    arq1000(v1);
+
+                    quickSort(v2, 10000);
+                    arq10000(v2);
+
+                    quickSort(v3, 100000);
+                    arq100000(v3);
+                    break;
+                case 6:
                     printf("================MERGE SORT===================\n\n");
                     break;
                 default:
