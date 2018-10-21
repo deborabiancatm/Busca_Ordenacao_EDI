@@ -146,3 +146,42 @@ void arq100000(int *vet){
     }
      fclose(arquivo); //Fecha o arquivo
 }
+
+void arquivoRand (int* vet, int* vet1, int* vet2, int* vet3){
+    int i = 0, num;
+    FILE *arquivo;
+
+    arquivo = fopen("100 Numeros Ordenados", "rt");
+    while((fscanf(arquivo,"%d ",&num)) != EOF){
+        vet[i]= num;
+        i++;
+    }
+    fclose(arquivo);
+
+    arquivo = fopen("1000 Numeros Ordenados", "rt");
+    i = 0;
+    while((fscanf(arquivo,"%d ",&num)) != EOF){
+        vet1[i]= num;
+        i++;
+    }
+    fclose(arquivo);
+
+    arquivo = fopen("10000 Numeros Ordenados", "rt");
+    i = 0;
+    while((fscanf(arquivo,"%d ",&num)) != EOF){
+        vet2[i]= num;
+        i++;
+    }
+    fclose(arquivo);
+
+    arquivo = fopen("100000 Numeros Ordenados", "rt");
+    i = 0;
+    while(!feof(arquivo)){
+        vet3[i]= num;
+        fscanf(arquivo,"%d ",&num);
+        i++;
+    }
+    fclose(arquivo);
+
+}
+

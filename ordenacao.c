@@ -12,7 +12,7 @@ int swap(int *menor, int *i){ //Funcao que troca valores de endereco
 }
 
 //FUNCOES DE ORDENACAO
-int selectionSort(int *vet, int size){
+void selectionSort(int *vet, int size){
     clock_t start, end;
     int i, j, min, aux = 0;
 
@@ -34,11 +34,9 @@ int selectionSort(int *vet, int size){
     printf("ALGORITMO: SELECTION SORT\n");
     printf("TAMANHO: %d numeros\n", size);
     printf("TEMPO: %f segundos\n\n", total_time);
-
-    return 0;
 }
 
-int insertSort(int *vet, int size){
+void insertSort(int *vet, int size){
     clock_t start, end;
     int i, j, pin;
 
@@ -60,11 +58,9 @@ int insertSort(int *vet, int size){
     printf("ALGORITMO: INSERT SORT\n");
     printf("TAMANHO: %d numeros\n", size);
     printf("TEMPO: %f segundos\n\n", total_time);
-
-    return 0;
 }
 
-int bubbleSort(int *vet, int size){
+void bubbleSort(int *vet, int size){
     clock_t start, end;
     int i, j;
 
@@ -84,10 +80,8 @@ int bubbleSort(int *vet, int size){
     printf("ALGORITMO: BUBBLE SORT\n");
     printf("TAMANHO: %d numeros\n", size);
     printf("TEMPO: %f segundos\n\n", total_time);
-
-    return 0;
 }
-int quick(int *vet, int first, int last){
+void quick(int *vet, int first, int last){
     int i, j, piv, aux;
     if (first < last){
         piv = first;
@@ -111,9 +105,8 @@ int quick(int *vet, int first, int last){
         quick(vet, first, j-1);
         quick(vet, j+1, last);
     }
-    return;
 }
-int quickSort(int *vet, int size){
+void quickSort(int *vet, int size){
     clock_t start, end;
     start = clock(); //Comeca a contar o tempo de execucao
 
@@ -125,8 +118,6 @@ int quickSort(int *vet, int size){
     printf("ALGORITMO: QUICK SORT\n");
     printf("TAMANHO: %d numeros\n", size);
     printf("TEMPO: %f segundos\n\n", total_time);
-
-    return 0;
 }
 
  void merge(int *vet, int begin, int middle, int end){
@@ -189,4 +180,20 @@ int mergeSort(int *vet, int size){
     printf("TEMPO: %f segundos\n\n", total_time);
 
     return 0;
+}
+
+void buscaSequencial(int *vet, int size, int n){
+    int i, j = 0;
+    for (i = 0; i < size; i++){
+        if (vet[i] == n)
+            j++;
+    }
+    if ( j > 0)
+        printf("\n%d FOI ENCONTRADO %d VEZES NO ARQUIVO COM %d VALORES\n", n, j, size);
+    else
+        printf("\n%d NAO ENCONTRADO NO ARQUIVO COM %d VALORES\n", n, size);
+}
+
+void buscaBinaria(int *vet, int size, int n){
+
 }

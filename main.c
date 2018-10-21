@@ -31,6 +31,8 @@ int main()
     printf("Opcao: ");
     scanf("%d", &op);
     //Seleciona a opcao do menu
+    int v0[100], v1[1000], v2[10000], v3[100000]; //cria todos os vetores necessarios
+
     switch (op){
         case 1:
             system ("CLS");
@@ -52,7 +54,6 @@ int main()
             int tipo;
             scanf("%d", &tipo);
 
-            int v0[100], v1[1000], v2[10000], v3[100000]; //cria todos os vetores necessarios
             leArquivo(v0, v1, v2, v3); //passa os valores dos arquivos pros vetores
             system("CLS");
             switch (tipo){
@@ -133,9 +134,33 @@ int main()
                 default:
                     printf("Opcao nao disponivel");
             }
-
             break;
         case 3:
+            system("CLS");
+            printf("================SELECIONAR BUSCA=====================\n\n");
+            printf("[1]BUSCA SEQUENCIAL\n[2]BUSCA BINARIA\n\nOBS.: Para realizar a busca binaria voce necessariamente precisa executar uma ordenacao.\n");
+            printf("Escolha o tipo de busca: ");
+            int a;
+            scanf("%d", &a);
+
+            switch(a){
+                case 1:
+                    leArquivo(v0, v1, v2, v3); //passa os valores dos arquivos pros vetores
+                    system("CLS");
+                    printf("================BUSCA SEQUENCIAL=====================\n\n");
+                    printf("Digite o valor de 0-999 que deseja buscar: ");
+                    int n;
+                    scanf("%d", &n);
+                    buscaSequencial(v0, 100, n);
+                    buscaSequencial(v1, 1000, n);
+                    buscaSequencial(v2, 10000, n);
+                    buscaSequencial(v3, 100000, n);
+                    break;
+                case 2:
+                    break;
+                    default:
+                        printf("Opcao nao disponivel");
+                }
             break;
         case 4:
             exit(0);
